@@ -1,0 +1,33 @@
+{
+    "name": "PomoColor V3",
+    "version": "0.2.0",
+    "description": "Sync your WLED lights with Pomofocus.io",
+    "permissions": ["storage", "tabs", "activeTab", "scripting"],
+    "host_permissions": ["https://pomofocus.io/"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*.pomofocus.io/*"],
+        "js": ["content-script.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+        ],
+        "matches": ["https://*.pomofocus.io/*"]
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "assets/ext-icon.png",
+        "24": "assets/ext-icon.png",
+        "32": "assets/ext-icon.png"
+      },
+      "default_title": "PomoColor",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}

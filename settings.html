@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="settings.css">
+    <title>PomoColor Settings</title>
+</head>
+<body id="body">
+    <div class="settings-container">
+        <div class="title">PomoColor Settings</div>
+        <div id="input_groups">
+            <div class="input-group">
+                <div class="labels">
+                    <label for="wledIP">WLED IP</label>
+                </div>
+                <div class="form-input">
+                    <input type="text" id="wledIP">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="labels">
+                    <label for="blinkEffectID">Blink Effect ID</label>
+                </div>
+                <div class="form-input">
+                    <input type="number" id="blinkEffectID" min="0">
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="labels">
+                    <label for="defaultEffectID">Default Effect ID</label>
+                </div>
+                <div class="form-input">
+                    <input type="number" id="defaultEffectID" min="0">
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="saveButton">Save</button>
+            <button id="colorMapButton">Color Map</button>
+        </div>
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>

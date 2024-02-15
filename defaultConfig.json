@@ -1,0 +1,7 @@
+{
+    "wled_ip": "192.168.1.100",
+    "wled_port": null,
+    "wled_blink_id": 16,
+    "wled_default_id": 17,
+    "sync": true
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>PomoColor</title>
+</head>
+<body>
+    <div class="popup-container">
+        <div class="header">
+            <div class="title">PomoColor v0.3.0</div>
+        <div class="toggle-switch">
+            <label class="switch">
+                <input type="checkbox" id="enableSyncToggle">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-label">SYNC</span>
+            <div class="settings-icon" id="settingsIcon">
+                <!-- Settings icon (You can use an appropriate icon) -->
+                ⚙️
+            </div>
+        </div>
+        <div class="wled-buttons">
+            <button class="wled-button on" id="wledOnButton">ON</button>
+            <button class="wled-button off" id="wledOffButton">OFF</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

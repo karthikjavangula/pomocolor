@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.settings-container {
+    padding: 40px;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #454545;
+    width: 260px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.labels {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #aeaeae;
+    letter-spacing: .5px;
+    flex: 1;
+}
+
+.form-input {
+    flex: 1;
+}
+
+label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: block;
+    color: #fff;
+}
+
+input {
+    width: 86.5%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #454545;
+    color: #fff;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+#saveButton {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+#colorMapButton {
+    margin-top: 10px;
+    background: linear-gradient(to right, #a4893c, #ba6969, #af4e91, #7d53a2, #397097, #38858a, #518a58);
+    color: #fff;
+}

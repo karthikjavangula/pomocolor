@@ -1,0 +1,167 @@
+/* $width: 240px; */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.title {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #aeaeae;
+  letter-spacing: .5px;
+  transform: scaleX(1.1);
+  /* display: flex; */
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.popup-container {
+  width: 240px;
+  padding: 20px;
+  text-align: center;
+}
+
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  margin-right: none;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #454545;
+  transition: .2s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  /* Snappier Transition needed */
+  transition: .2s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 5px white;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.toggle-label {
+  margin-right: 85px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: .5px;
+  color: #aeaeae;
+  /* transform: scaleY(1.7); */
+}
+
+.wled-buttons {
+  margin-top: 10px;
+  margin-bottom: 1px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wled-button {
+  width: 48%; /* Each button takes up 48% of the width */
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.wled-button.on {
+  background-color: #4CAF50;
+}
+
+.wled-button.off {
+  background-color: #f44336;
+}
+
+.ip-input {
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: .5px;
+  color: #aeaeae;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  height: 40px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  /* make rounder */
+  border-radius: 5px;
+  background-color: #454545;
+  color: #fff;
+  /* border: 1px solid #555; */
+  border: none;
+}
+
+
+.settings-icon {
+  margin-left: none;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #aeaeae;
+}
+
+
+.settings-section {
+  display: none;
+  margin-top: none;
+}

@@ -1,0 +1,71 @@
+body {
+    background-color: #1e1e1e;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #454545;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 260px;
+}
+
+.heading {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.colormapper-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.color-mapper-row {
+    display: flex;
+}
+
+.default-color-button, .user-color-button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1; /* Occupies the whole width */
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.default-color-button {
+    pointer-events: none;
+    color: #fff;
+}
+
+.save-container {
+    margin-top: 20px;
+    text-align: center;
+    color: #000;
+}
+
+#saveButton {
+    width:96.3%;
+    padding: 10px;
+    background: linear-gradient(to right, #a4893c, #ba6969, #af4e91, #7d53a2, #397097, #38858a, #518a58
+    );
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 16px;
+}
