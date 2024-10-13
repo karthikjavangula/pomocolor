@@ -3,5 +3,6 @@
     "wled_port": null,
     "wled_blink_id": 16,
     "wled_default_id": 17,
-    "sync": true
+    "sync": true,
+    "coloringClassName": "sc-lkqHmb"
 }

@@ -1,11 +1,16 @@
 // import MutationObserver from 'mutation-observer'; // Import the MutationObserver class
-const getColoringClass = () => {
-    const targetElements = document.getElementsByClassName('sc-cLQEGU');
+
+// const className = 'sc-cLQEGU';
+// const className = 'sc-lkqHmb';
+const getColoringClass = (extensionConfig) => {
+    const targetElements = document.getElementsByClassName(extensionConfig.coloringClassName);
     if (targetElements.length > 0) {
         const targetElement = targetElements[0];
         const coloringClass = targetElement.className.split(' ')[1];
+        console.log('Coloring class:', coloringClass);
         return coloringClass;
     } else {
+        console.log('Failed to find Coloring class. Please check the defaultConfig.json');
         return null;
     }
 };
@@ -23,16 +28,26 @@ function updateWLED(color, blinkAtFirst=true) {
 }   
 
 
-function watchColorChanges(colorMap) {
-    let previousColor = getColoringClass();
-    console.log('{WLED}Initial color:', previousColor, colorMap[previousColor].name);
-    updateWLED(colorMap[previousColor], false);
+function watchColorChanges(colorMap, extensionConfig) {
+    let previousColor = getColoringClass(extensionConfig);
+    console.log("got previous color", previousColor);
+    if (previousColor && colorMap[previousColor]) {
+        console.log('{WLED}Initial color:', previousColor, colorMap[previousColor].name);
+        updateWLED(colorMap[previousColor], false);
+    }
+    else {
+        console.log('colorMap.json and extensionConfig.json are out of date. Please update them.');
+    }
 
     const observer = new MutationObserver(() => {
-        const currentColor = getColoringClass();
+        const currentColor = getColoringClass(extensionConfig);
 
         if (currentColor !== previousColor) {
             console.log('Color changed:', currentColor);
+            if (!colorMap[currentColor]) {
+                console.log('Color not found in colorMap.json');
+                return;
+            }
             console.log(colorMap[currentColor].name);
             updateWLED(colorMap[currentColor]);
             previousColor = currentColor;
@@ -63,5 +78,5 @@ chrome.storage.local.get(['extensionConfig'], function (result) {
 });
 
 window.onload = function () {
-    watchColorChanges(colorMap);
+    watchColorChanges(colorMap, extensionConfig);
 };
